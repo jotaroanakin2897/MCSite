@@ -62,5 +62,10 @@ Configuration guide
      we choose localhost mode, instead of HTTPS
 
    
+#Contributors
+----------
 
-    
+- [Bernardo Iamicella] bernardo.iamicella001@studenti.unipartenope.it
+- [Davide Carobene] davide.carobene001@studenti.unipartenope.it
+
+If you have any issues, you can contact us.

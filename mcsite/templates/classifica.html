@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <title>CLASSIFICA</title>
+{% endblock head %}
+{% block body %}
+    <h1>CLASSIFICA</h1>
+
+
+        <table border="1" style="width: 99%; ">
+        <thead>
+                <tr>
+                    <th>Utente</th>
+                    <th>Punteggio</th>
+                    <th>Data e Ora</th>
+                </tr>
+            </thead>
+
+                    {% for record in classifica  |sort(attribute='score', reverse = True) %}
+                    <tr style="border-bottom: 1px solid #ddd" >
+
+                        <td style="padding: 10px;" width="15%"><br><b> {{ record.user }}</b>
+                            <br>
+
+                        </td>
+
+                        <td style="padding: 10px;" width="5%"><br><b> {{ record.score }} </b>
+                            <br>
+
+                        </td>
+
+                        <td style="padding: 10px;" width="15%"><br><b> {{ record.time }}</b>
+                            <br>
+
+                        </td>
+
+
+                    </tr>
+                    {% endfor %}
+                </table>
+
+
+
+
+
+
+
+{% endblock body %}

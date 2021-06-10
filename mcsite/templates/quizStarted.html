@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Gioco iniziato!</title>
+
+{% endblock head %}
+
+{% block body %}
+    <h1>QUESTIONARIO SU {{ citta }}</h1>
+        <form id="risposta"  method="POST" action="/valutazione?citta={{ citta }}">
+
+
+        <table border="1" style="width: 99%; ">
+
+                    {% for domanda in lista_domande %}
+                    <tr style="border-bottom: 1px solid #ddd" >
+
+                        <td style="padding: 10px;" width="55%"><br><b>{{domanda.question}}</b>
+                            <br>
+
+                        <table  style="width: 100%;">
+                            {% for reply in domanda.answers %}
+                            <tr>
+                                <br>
+                                <td>
+
+                                    <input type="checkbox"  value='{{ reply.text }}' name="check" >
+                                    <a>{{reply.text}}</a>
+                                    </input>
+
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+
+                        </td>
+
+
+                    </tr>
+                    {% endfor %}
+                </table>
+                    <input style="margin-left: 300px" type="submit" value="Invia le risposte!">
+
+
+    </form>
+
+
+
+
+
+{% endblock body %}

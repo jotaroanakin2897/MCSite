@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+
+
+{% block head %}
+  <title>Travel Game</title>
+    <link rel="stylesheet"  href="../static/css/Menu.css">
+
+{% endblock head %}
+
+{% block body %}
+    <div style="background: url(../images/Travel-game.png)">
+    <br><br><br><br><br>
+  <div id="allthethings">
+  <div id="left"></div>
+    <a href="/single">
+        <div id="single" ><p>GIOCA</p></div>
+    </a>
+
+    <br><br>
+    <a href="/classifica">
+  <div id="options"><p>CLASSIFICA</p></div>
+        </a>
+    <br>
+    <a href="/info">
+  <div id="credits"><p>INFO</p></div>
+        </a>
+  <div id="right"></div>
+
+
+</div>
+
+
+
+    </div>
+    {% if error %}
+        <div>
+            <h2 style="color: red;margin-top: 260px;margin-left: 400px">LOGIN RICHIESTO!</h2></div>
+    {% endif %}
+{% endblock body %}

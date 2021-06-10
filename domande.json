@@ -1,0 +1,100 @@
+[
+  {
+    "question": "Quale personaggio tratto da un  romanzo horror è nato a Napoli?",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Toto e Peppino", "correct": false },
+      { "text": "Frankestein ", "correct": true },
+      { "text": " Fedez", "correct": false },
+      { "text": "Dracula", "correct": false }
+    ]
+  },
+  {
+    "question": "Qual è il santo patrono di Napoli?",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "San Ciro", "correct": false },
+      { "text": "San Pasquale", "correct": false },
+      { "text": "San Giuseppe", "correct": false },
+      { "text": "San Gennaro", "correct": true }
+    ]
+  },
+  {
+    "question": "Napoli è la città con più teatri in Italia",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Vero", "correct": true },
+      { "text": "Falso", "correct": false }
+    ]
+  },
+  {
+    "question": "Qual è il significato antico del nome Neapolis?",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Città grande", "correct": false },
+      { "text": "Città della bellezza", "correct": false },
+      { "text": "Città vecchia", "correct": false },
+      { "text": "Città nuova", "correct": true }
+    ]
+  },
+  {
+    "question": "Quale evento ha avuto luogo a Napoli nel 1994? ",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Viene costruita la prima base NATO", "correct": false },
+      { "text": "Arriva Diego Armando Maradona", "correct": false },
+      { "text": "Napoli ospita il G7", "correct": true },
+      { "text": "Il sindaco si dimette", "correct": false }
+    ]
+  },
+  {
+    "question": "Chi fu il primo docente della cattedra di Economia Politica nel 1754?",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Antonio de Curtis", "correct": false },
+      { "text": "Cioffo Giuseppe", "correct": false },
+      { "text": "Bartolomeo Intieri", "correct": true },
+      { "text": "Luigi de Rosa", "correct": false }
+    ]
+  },
+  {
+    "question": "Quali sono i principali colori del logo cittadino di Napoli?",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Rosso-Oro", "correct": true },
+      { "text": "Azzurro", "correct": false },
+      { "text": "Bianco-Blu", "correct": false },
+      { "text": "Giallo", "correct": false }
+    ]
+  },
+  {
+    "question": "Napoli ha il centro storico più grande d'Europa",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Falso", "correct": false },
+      { "text": "Vero", "correct": true }
+    ]
+  },
+  {
+    "question": "Su quale mare si affaccia il golfo di Napoli?",
+	"citta": "Napoli",
+    "answers": [
+      { "text": "Ionio", "correct": false },
+      { "text": "Adriatico", "correct": false },
+      { "text": "Tirreno", "correct": true },
+      { "text": "Egeo", "correct": false }
+    ]
+  }  ,
+
+  {
+    "question": "Quante abitanti ha Napoli?",
+    "citta": "Napoli",
+    "answers": [
+      { "text": "4000000", "correct": false },
+      { "text": "2000000", "correct": false },
+      { "text": "3000000", "correct": true },
+      { "text": "6000000", "correct": false }
+    ]
+  }
+
+]

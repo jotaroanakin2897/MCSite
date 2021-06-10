@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Quiz for {{ citta }}</title>
+
+{% endblock head %}
+
+{% block body %}
+    <br><br><br><br>
+    <h2 style="color:blue">La città che hai scelto è: {{ citta }}</h2>
+    <br>
+    {% if(not domande_non_disponibili ) %}
+    <h3 style="color:blue">Inizia un questionario sulla città che hai scelto il gioco consiste in alcune domande! Vediamo quanto conosci {{ citta }}!</h3>
+            <br><br><br><br><br>
+        <form id="gioca" style="margin-left: 500px" method="post" action="/quizStarted?citta={{ citta }}">
+        <input type="submit" value="Inizia il gioco!">
+    </form>
+    {% else %}
+        <h3>Non esistono ancora domande su {{ citta }}!</h3>
+            <br><br><br><br><br>
+            <form id="crea" style="margin-left: 500px" method="post" action="/PrecreaQuiz?citta={{ citta }}">
+        <input type="submit" value="Aggiungi Domande!">
+    </form>
+    {% endif %}
+
+
+{% endblock body %}

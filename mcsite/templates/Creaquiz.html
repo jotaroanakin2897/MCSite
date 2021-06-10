@@ -1,0 +1,136 @@
+
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Crea Quiz for {{ citta }}</title>
+
+{% endblock head %}
+
+{% block body %}
+    <br><br><br><br>
+    <h2>La città che hai scelto è: {{ citta }}</h2>
+    <br>
+    <h3>Crea un quiz personalizzato per {{ citta }}!</h3>
+    <br><br><br><br><br>
+<table>
+
+<table>
+<thead>
+  <tr>
+    <th width="35%">Domanda</th>
+    <th width="25%" style="padding: 30px">Numero di risposte </th>
+    <th width="35%" style="padding: 30px">Risposte</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+
+            <input id="domanda" name="domanda"  placeholder="Domanda 1"></input>
+
+    </td>
+    <td>
+        <input type="number" id="member" name="member" value=""> <br>Numero di risposte: (max. 4)<br />
+    <a href="#" id="filldetails" onclick="addFields()">Genera risposte</a>
+
+
+    </td>
+    <td>
+
+        <div id="container"></div>
+    </td>
+
+  </tr>
+
+    <button onclick="replies('{{ citta }}')">Crea</button>
+
+
+
+
+
+
+
+
+</tbody>
+</table>
+
+
+        <script type='text/javascript'>
+        function addFields(){
+            // Number of inputs to create
+            var number = document.getElementById("member").value;
+            // Container <div> where dynamic content will be placed
+            var container = document.getElementById("container");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            var risposte=[];
+            for (i=0;i<number;i++){
+
+                container.appendChild(document.createTextNode("Risposta " + (i+1)+" "));
+
+
+
+                var input = document.createElement("input");
+                input.type = "text";
+
+                input.id = "risposta" + i;
+                input.value=""
+
+                container.appendChild(input);
+                x=document.createElement("INPUT");
+                x.setAttribute("type", "checkbox");
+                x.setAttribute("value","off");
+                x.setAttribute("id","checkbox"+i);
+                container.appendChild(x);
+
+                container.appendChild(document.createElement("br"));
+                console.log(container)
+
+
+
+            }
+        }
+    </script>
+
+
+    <script>
+  function replies(citta) {
+
+        var req = new XMLHttpRequest();
+        url="CreaQuiz?citta="+citta;
+        console.log(document.getElementById("checkbox0"));
+
+        req.open('POST', url, true);
+        req.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+        var requestString="domanda=" + document.getElementById('domanda').value+"&numRisposte=" + document.getElementById('member').value;
+            for (i=0;i<document.getElementById('member').value;i++)
+            {
+                requestString+="&risposta"+i+"="+document.getElementById("risposta"+i).value;
+                requestString+="&check"+i+"="+document.getElementById("checkbox"+i).checked;
+            }
+
+        console.log(requestString)
+
+        req.send(requestString);
+
+
+
+
+
+
+  }
+</script>
+
+    <br>
+
+
+
+
+
+
+
+
+
+{% endblock body %}
